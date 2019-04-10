@@ -7,7 +7,7 @@ from discord.ext import commands
 from communication import scrollsguide
 
 
-class Game:
+class Game(commands.Cog):
     def __init__(self, bot: commands.bot.Bot) -> None:
         self.bot = bot
 
