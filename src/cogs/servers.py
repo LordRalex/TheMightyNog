@@ -11,7 +11,7 @@ from helpers import commands_info
 from mighty_nog import MightyNog
 
 
-class Servers:
+class Servers(commands.Cog):
     def __init__(self, bot: MightyNog) -> None:
         self.bot = bot
 
