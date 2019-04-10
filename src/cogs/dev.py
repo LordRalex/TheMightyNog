@@ -10,7 +10,7 @@ from mighty_nog import MightyNog
 from settings import devs
 
 
-class Dev:
+class Dev(commands.Cog):
     def __init__(self, bot: MightyNog) -> None:
         self.bot = bot
 
