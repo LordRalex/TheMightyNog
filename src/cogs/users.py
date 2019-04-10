@@ -8,7 +8,7 @@ from helpers import commands_info
 from mighty_nog import MightyNog
 
 
-class User:
+class User(commands.Cog):
     def __init__(self, bot: MightyNog) -> None:
         self.bot = bot
 
