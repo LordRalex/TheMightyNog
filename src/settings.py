@@ -3,8 +3,7 @@ extensions = [
     'cogs.game',
     'cogs.dev',
     'cogs.users',
-    'cogs.servers',
-    'cogs.artifact.trivia'
+    'cogs.servers'
 ]
 
 devs = [132577770046750720]
