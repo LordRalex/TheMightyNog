@@ -6,7 +6,7 @@ from discord.ext import commands
 from helpers import commands_info
 
 
-class Generic:
+class Generic(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
