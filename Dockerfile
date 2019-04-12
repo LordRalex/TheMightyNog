@@ -2,7 +2,7 @@ FROM python:3.6-alpine3.7
 
 COPY . .
 
-RUN apk add --no-cache gcc musl-dev postgresql-dev python3-dev \
+RUN apk add --no-cache git gcc musl-dev postgresql-dev python3-dev \
  && pip3 install pipenv \
  && pip3 install Jinja2 \
  && pipenv install --system --deploy \
