@@ -2,10 +2,6 @@ import logging
 import os
 import pathlib
 
-from prometheus_client import start_http_server
-from raven.conf import setup_logging as add_sentry_handler
-from raven.handlers.logging import SentryHandler
-
 import settings
 from mighty_nog import MightyNog
 from helpers import commands_info
@@ -36,11 +32,6 @@ def setup_logging():
     file_handler.setFormatter(file_formatter)
     log.addHandler(file_handler)
 
-    if os.getenv('NOG_SENTRY_URL'):
-        sentry_handler = SentryHandler(os.environ['NOG_SENTRY_URL'])
-        sentry_handler.setLevel(logging.ERROR)
-        add_sentry_handler(sentry_handler)
-
 
 setup_logging()
 
@@ -54,7 +45,6 @@ bot = MightyNog(
 
 
 if __name__ == '__main__':
-    start_http_server(8000)
     for extension in settings.extensions:
         bot.load_extension(extension)
     bot.run(os.environ.get('NOG_BOT_TOKEN'))
